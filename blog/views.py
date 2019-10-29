@@ -4,7 +4,8 @@ from .models import Blog
 
 def allblogs(request):
 	blogs = Blog.objects
-	return render(request, 'blog/allblogs.html', {"blogs":blogs})
+	categories = ["Travel", "Programming", "Books"]
+	return render(request, 'blog/allblogs.html', {"blogs":blogs, "categories":categories})
 
 def detail(request, blog_id):
 	detailedblog = get_object_or_404(Blog, pk=blog_id)

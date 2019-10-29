@@ -13,8 +13,9 @@
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
+  
+  <!-- Font -->
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Staatliches&display=swap" rel="stylesheet">
 
   <style>
     .bd-placeholder-img {
@@ -31,26 +32,56 @@
         font-size: 3.5rem;
       }
     }
+
+    .navbar-custom {
+      background-color: #ff8126;
+      font-family: 'Staatliches', cursive;
+      box-shadow: 0px 1px #bfbcb2;
+      opacity: 0.8;
+    }
+
+    .font-custom {
+      font-family: 'Fira Sans Condensed', sans-serif;
+    }
+
+    .tan-background {
+      background-color: #decfb8;
+    } 
+
+    .carousel {
+      width: 80%;
+      height: 80%;
+      margin: auto;
+    }
+
+    .bottom-border-custom {
+      box-shadow: 0px 1px #bfbcb2;
+    }
+
+    .btn-custom {
+      background-color: #ff8126;
+      opacity: 0.8;
+    }
   </style>
 </head>
-<body>
+<body class="tan-background">
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light navbar-custom">
       <a class="navbar-brand" href="{% url 'home' %}">Leonardo Santos</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="http://www.linkedin.com/in/leonardo-dean-s-141134a9">LinkedIn</a>
-          <a class="nav-item nav-link" href="{% static 'LES_Resume_2019.pdf' %}">Resume</a>
-          <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
+          <a class="nav-item nav-link" href="http://www.linkedin.com/in/leonardo-dean-s-141134a9"><img src="{% static 'linkedin.png' %}" class="d-inline-block align-center" height=30 width=30 title="Icon made by Freepik from www.flaticon.com"> LinkedIn</a>
+          <a class="nav-item nav-link" href="{% static 'LES_Resume_2019.pdf' %}"><img src="{% static 'resume.png' %}" class="d-inline-block align-center" height=30 width=30 title="Icon made by Smashicons from www.flaticon.com"> Resume</a>
+          <a class="nav-item nav-link" href="{% url 'allblogs' %}"><img src="{% static 'blogging.png' %}" class="d-inline-block align-center" height=30 width=30 title="Icon made by Freepik from www.flaticon.com"> Blog</a>
         </div>
       </div>
     </nav>
   </header>
 
-  <main role="main">
+  <main style="" role="main">
 
   <div class="container">
 
