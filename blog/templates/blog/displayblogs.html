@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container pt-4 bottom-border-custom">
+	<div class="nav-scroller pt-5 mb-2">
+		<nav class="nav d-flex justify-content-center">
+			{% for category in categories %}
+			<a class="p-2 text-muted" href="#">{{ category }}</a>
+			{% endfor %}
+		</nav>
+	</div>
+</div>
+
+<h2>Latest Posts</h2>
+<hr>
+
+{% for blog in blogs.all %}
+<a href="{% url 'detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
+{{ blog.pub_date_pretty }}
+<br/>
+<img class="img-fluid" src="{{ blog.image.url }}" height=200 width=200 />
+<br />
+<p>{{ blog.summary }}</p>
+{% endfor %}
+
+{% endblock %}

@@ -6,7 +6,7 @@
 	<div class="nav-scroller pt-5 mb-2">
 		<nav class="nav d-flex justify-content-center">
 			{% for category in categories %}
-			<a class="p-2 text-muted" href="#">{{ category }}</a>
+			<a class="p-2 text-muted" href="{% url 'getblogscat' category %}">{{ category }}</a>
 			{% endfor %}
 		</nav>
 	</div>

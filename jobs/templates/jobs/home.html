@@ -37,15 +37,28 @@
 
     <div class="album py-2 tan-background">
       <div class="container">
-
+        <h1 class="font-custom">Current Projects</h1>
         <div class="row">
-
-          {% for job in jobs.all %}
+          {% for currentjob in currentjobs.all %}
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="{{ job.image.url }}" />
+              <img class="card-img-top" src="{{ currentjob.image.url }}" />
               <div class="card-body">
-                <p class="card-text">{{job.summary}}</p>
+                <p class="card-text">{{currentjob.summary}}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <hr/>
+        <h1 class="font-custom">Past Projects</h1>
+        <div class="row">
+          {% for pastjob in pastjobs.all %}
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="{{ pastjob.image.url }}" />
+              <div class="card-body">
+                <p class="card-text">{{pastjob.summary}}</p>
               </div>
             </div>
           </div>
