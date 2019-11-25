@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import Job
 
@@ -9,3 +9,7 @@ def home(request):
 
 def aboutme(request):
 	return render(request, 'jobs/aboutme.html')
+
+def jobdetail(request, job_id):
+	detailedjob = get_object_or_404(Job, pk=job_id)
+	return render(request, 'jobs/jobdetail.html', {"job":detailedjob})

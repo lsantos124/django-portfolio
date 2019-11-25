@@ -22,12 +22,14 @@
         <div class="row">
           {% for currentjob in currentjobs.all %}
           <div class="col-md-4">
+            <a class="a-normal" href="{% url 'jobdetail' currentjob.id %}">
             <div class="card mb-4 shadow-sm">
               <img class="card-img-top" src="{{ currentjob.image.url }}" />
               <div class="card-body">
                 <p class="card-text">{{currentjob.summary}}</p>
               </div>
             </div>
+            </a>
           </div>
           {% endfor %}
         </div>
@@ -36,12 +38,14 @@
         <div class="row">
           {% for pastjob in pastjobs.all %}
           <div class="col-md-4">
+            <a class="a-normal" href="{% url 'jobdetail' pastjob.id %}">
             <div class="card mb-4 shadow-sm">
               <img class="card-img-top" src="{{ pastjob.image.url }}" />
               <div class="card-body">
                 <p class="card-text">{{pastjob.summary}}</p>
               </div>
             </div>
+            </a>
           </div>
           {% endfor %}
           
