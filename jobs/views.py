@@ -7,4 +7,5 @@ def home(request):
 	pastjobs = Job.objects.filter(current=False)
 	return render(request, 'jobs/home.html', {'currentjobs':currentjobs, 'pastjobs':pastjobs})
 
-	
+def aboutme(request):
+	return render(request, 'jobs/aboutme.html')
